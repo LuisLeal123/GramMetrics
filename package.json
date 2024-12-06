@@ -1,0 +1,9 @@
+{
+    "name": "grammetric",
+    "version": "1.0.0",
+    "_comment": "This project tracks changes in Instagram followers using user-provided data.",
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+}
+  
