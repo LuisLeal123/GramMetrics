@@ -1,17 +1,18 @@
-from flask import Flask 
+from flask import Flask, render_template
+app = Flask(__name__)  # runs app with root path of module
 
-# runs app with root path of module
-app = Flask(__name__) 
 
 # Main page
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return render_template('home.html') 
+
 
 # test page
 @app.route('/test')
 def home2():
-    return "testing other homepage"
+    return render_template('home.html')
+
 
 # won't run server when imported as module
 if __name__ == '__main__':
