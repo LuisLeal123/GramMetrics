@@ -1,3 +1,5 @@
+# runs the website
+
 from flask import Flask, render_template
 app = Flask(__name__)  # runs app with root path of module
 
