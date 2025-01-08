@@ -6,3 +6,25 @@
  */
 
  
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-half {
+    color: purple;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-half {
+    color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

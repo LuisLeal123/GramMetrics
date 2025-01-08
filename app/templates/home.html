@@ -7,12 +7,14 @@ the necessary scripts and styles.
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page</h1>
-    <p>{{name}} is lame</p>
-</body>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <h1>Welcome to the Home Page</h1>
+        <p>{{name}} is lame</p>
+    </body>
 </html>
 

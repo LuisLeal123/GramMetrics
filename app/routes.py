@@ -12,7 +12,6 @@ def home():
 @main.route("/<string:name>")
 def test(name):
     name = name.capitalize()
-    #return f"hello, {name}"
     return render_template('home.html', name=name)
 
 # register the routes in create_app()
