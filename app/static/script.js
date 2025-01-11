@@ -6,15 +6,27 @@
  * to the backend.
  */
 
-// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Select the button by its id
-    const button = document.getElementById("myButton");
+    const greetButton = document.getElementById("myButton");
 
-    // Add a click event listener to the button
-    button.addEventListener("click", () => {
-        // Add the logic you want here
-        console.log("Button was clicked!");
-        alert("Button Clicked!"); // Example: Show an alert
-    });
+    // Function to send an action to the backend
+    const sendAction = async (action) => {
+        try {
+            const response = await fetch('/api/action', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ action }),
+            });
+
+            const result = await response.json();
+            alert(result.message); // Show the backend's response
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    };
+
+    // Add click listeners for each button
+    greetButton.addEventListener("click", () => sendAction('greet'));
 });
